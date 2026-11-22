@@ -1,4 +1,4 @@
-# sensenova-loop-gfx1201
+# SenseNova-Loop-9B-ggml-gfx1201-windows-rocm
 
 在 **原生 Windows** 上用 AMD RX 9070 系列顯卡跑 SenseNova-Loop-9B（GGUF）的免安裝 llama.cpp 執行環境。不需要 WSL、Linux、ROCm／HIP SDK、Visual Studio，也不用自己編譯：解壓縮後就能用。
 
@@ -23,7 +23,7 @@
 
 - Windows 10／11 64 位元。
 - AMD Adrenalin 顯示卡驅動：使用近期版本（實測驅動 `32.0.32015.2008`）。runtime 只用系統裝好的驅動，其他 ROCm 元件都自帶。
-- 系統 RAM：建議 32 GB。
+- 系統 RAM：**8 GB 以上就夠**。權重 4.9 GiB 在顯卡上，host 端只留約 546 MiB（tensor 對齊用的零碎部分）與 mmap 頁面快取。RAM 大小不影響速度。
 - 硬碟：runtime 解壓後約 508 MB；Q4_K_M 模型 5.42 GiB。
 - 顯存：Q4_K_M 權重佔 4.9 GiB，KV 另外算。16 GB 卡跑 64K context 三路約用 8.6 GiB，還有一半空間。
 
