@@ -1,0 +1,16 @@
+# binaries go to GitHub Releases, not into git
+ggml-gfx1201-windows-rocm/
+*.zip
+*.dll
+*.exe
+
+# keep the text
+!README.md
+!BUILD.md
+!UPLOAD.md
+!LICENSE-llama.cpp
+!.gitignore
+
+# scratch
+__pycache__/
+*.log
